@@ -234,7 +234,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   target: {fileID: 0}
-  Garden: []
+  garden: []
+  player: {fileID: 3785106557470534531, guid: af16a7f14fe388d488e1a7a769a7e718, type: 3}
+  rangeVision: 5
 --- !u!54 &7901926718619077041
 Rigidbody:
   m_ObjectHideFlags: 0

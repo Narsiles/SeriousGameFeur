@@ -2082,7 +2082,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1236366889}
-  m_LocalRotation: {x: 0.62872034, y: -0.00000001492019, z: 0.000000012063072, w: 0.7776316}
+  m_LocalRotation: {x: 0.62872034, y: -0.000000014959543, z: 0.000000012094892, w: 0.7776316}
   m_LocalPosition: {x: 0, y: 25.91, z: -15.290001}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -2330,7 +2330,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1378343173387260362, guid: 4dbddf131560aa0499d6cb191594bcaf, type: 3}
       propertyPath: cooldownManager
-      value: 2
+      value: 0.2
       objectReference: {fileID: 0}
     - target: {fileID: 1378343173387260362, guid: 4dbddf131560aa0499d6cb191594bcaf, type: 3}
       propertyPath: spawnPoint.Array.size
@@ -3162,7 +3162,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1692088372}
-  m_LocalRotation: {x: 0.62872034, y: -0.00000001492019, z: 0.000000012063072, w: 0.7776316}
+  m_LocalRotation: {x: 0.62872034, y: -0.000000014959543, z: 0.000000012094892, w: 0.7776316}
   m_LocalPosition: {x: 0, y: 25.91, z: -15.290001}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
