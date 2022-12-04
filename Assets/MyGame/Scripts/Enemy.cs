@@ -52,7 +52,7 @@ public class Enemy : MonoBehaviour
     }
     
     public void IsTouch()
-    {
+    {     
         Invoke("Death", 2f);
         isAlive = false;
     }
