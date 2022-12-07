@@ -12,7 +12,9 @@ public class NavArrow : MonoBehaviour
     }
     void Update()
     {
-        transform.LookAt(target.transform.position);
+        Vector3 targetPosition = target.transform.position;
+        targetPosition.y = transform.position.y;
+        transform.LookAt(targetPosition);
     }
 
     public void LookThree()

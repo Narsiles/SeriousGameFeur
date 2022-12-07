@@ -9,6 +9,7 @@ public class Enemy : MonoBehaviour
     [SerializeField] public Transform target;
     [SerializeField] GameObject[] garden;
     [SerializeField] GameObject player;
+    [SerializeField] int lifePoint = 3;
 
     [SerializeField] private float rangeVision = 5;
     private float distanceBetween = 1000000;
@@ -51,10 +52,27 @@ public class Enemy : MonoBehaviour
        
     }
     
-    public void IsTouch()
-    {     
-        Invoke("Death", 2f);
-        isAlive = false;
+    public void IsTouch(int damage, int strength, Transform t)
+    {
+        
+        if(lifePoint <= 0)
+        {
+            //GetComponent<Rigidbody>().AddForce(t.forward * strength);
+            Invoke("Death", 2f);
+            isAlive = false;
+        }
+        else
+        {
+            GetComponent<Rigidbody>().AddForce(new Vector3(t.forward.x + 10, t.forward.y + 5, t.forward.z) / 2, ForceMode.Impulse);
+            lifePoint -= damage;
+        }
+        
+        
+    }
+
+    private void OnMouseDown()
+    {
+        GetComponent<Rigidbody>().AddForce(new Vector3(transform.forward.x - 10, transform.forward.y + 5, transform.forward.z) / 2, ForceMode.Impulse);
     }
 
     private void Death()

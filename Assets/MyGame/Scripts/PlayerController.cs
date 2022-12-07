@@ -1,11 +1,14 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 using UnityEngine.Animations;
 
 public class PlayerController : MonoBehaviour
 {
     [SerializeField] FloatingJoystick joystick;
+    [SerializeField] Image cdBar;
+    [SerializeField] GameObject allBar;
 
     Vector3 moveDirection;
     Vector3 aimDirection;
@@ -15,24 +18,33 @@ public class PlayerController : MonoBehaviour
     [SerializeField] float decceleration = 0.1f;
     [SerializeField] float smoothRotation = 0.1f;
 
-    //[SerializeField] float fireRate;
+    [SerializeField] float atkspeed = 2f;
+    private float cdAtk;
+    private bool canAtk = true;
+    [SerializeField] int damage = 1;
+    [SerializeField] private int strength = 200;
 
     // Cache
     Rigidbody rb;
     GameManager gameManager;
     private bool isTrigger = false;
     private GameObject target;
-    [SerializeField] private int strength = 200;
+    
     private bool haveShowel = false;
 
     private void Awake()
     {
         rb = GetComponent<Rigidbody>();
         gameManager = FindObjectOfType<GameManager>();
+        //cdBar = GetComponent<Image>();
+
+        cdAtk = 0;
     }
 
     void Update()
     {
+        cdBar.fillAmount = cdAtk / atkspeed;
+
         if (joystick.Direction.magnitude > 0)
         {
             // Vecteur de direction de déplacement
@@ -54,6 +66,23 @@ public class PlayerController : MonoBehaviour
             transform.forward = Vector3.Lerp(transform.forward, aimDirection, smoothRotation);
             aimDirection = moveDirection;
         }
+
+        if(canAtk == false)
+        {
+            allBar.SetActive(true);
+            if(cdAtk >= atkspeed)
+            {
+                canAtk = true;
+                cdAtk = 0;
+                allBar.SetActive(false);
+            }
+            else
+            {
+                cdAtk += Time.deltaTime;
+                
+            }
+        }
+
     }
 
     private void OnTriggerEnter(Collider other)
@@ -84,9 +113,11 @@ public class PlayerController : MonoBehaviour
     {
         if(haveShowel == true)
         {
-            targetfunction.GetComponent<Enemy>().IsTouch();
-            targetfunction.GetComponent<Rigidbody>().AddForce(-targetfunction.transform.forward * strength, ForceMode.Impulse);
-            
+            if(canAtk == true)
+            {
+                targetfunction.GetComponent<Enemy>().IsTouch(damage, strength, transform);
+                canAtk = false;
+            }
         }
     }
 
