@@ -8,7 +8,7 @@ public class PlayerController : MonoBehaviour
 {
     [SerializeField] FloatingJoystick joystick;
     [SerializeField] Image cdBar;
-    [SerializeField] Image lifeBar;
+
     [SerializeField] GameObject allBar;
 
     Vector3 moveDirection;
@@ -26,8 +26,7 @@ public class PlayerController : MonoBehaviour
     private bool canAtk = true;
     [SerializeField] int damage = 1;
     [SerializeField] private int strength = 200;
-    [SerializeField] private float lifePointMax = 20;
-    [SerializeField] private float lifePoint = 20;
+
 
     // Cache
     Rigidbody rb;
@@ -51,7 +50,8 @@ public class PlayerController : MonoBehaviour
     void Update()
     {
         cdBar.fillAmount = cdAtk / atkspeed;
-        lifeBar.fillAmount = lifePoint / lifePointMax;
+       
+
 
         if (joystick.Direction.magnitude > 0)
         {
@@ -80,7 +80,7 @@ public class PlayerController : MonoBehaviour
 
         if (isTrigger)
         {
-            transform.LookAt(target.transform.position);
+            //transform.LookAt(target.transform.position);
         }
         else
         {
@@ -106,7 +106,7 @@ public class PlayerController : MonoBehaviour
 
     }
 
-    private void OnTriggerEnter(Collider other)
+    private void OnTriggerStay(Collider other)
     {
         if (other.CompareTag("Enemy"))
         {
@@ -145,10 +145,5 @@ public class PlayerController : MonoBehaviour
     public void TakeShowel()
     {
         haveShowel = true;
-    }
-
-    private void TakeDamage()
-    {
-        lifePoint -= 1;
     }
 }

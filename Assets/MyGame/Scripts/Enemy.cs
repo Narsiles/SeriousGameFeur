@@ -12,6 +12,7 @@ public class Enemy : MonoBehaviour
     [SerializeField] int lifePoint = 3;
     [SerializeField] ParticleSystem walkFX;
     [SerializeField] ParticleSystem hitFX;
+    [SerializeField] float damageDo = 1;
 
     [SerializeField] private float rangeVision = 5;
     private float distanceBetween = 1000000;
@@ -37,7 +38,7 @@ public class Enemy : MonoBehaviour
 
     void Update()
     {
-
+        
         if (Vector3.Distance(player.transform.position, transform.position) < rangeVision)
         {
             target = player.transform;
@@ -57,13 +58,23 @@ public class Enemy : MonoBehaviour
             walkFX.Stop();
         }
     }
-    
+
+    private void OnCollisionEnter(Collision collision)
+    {
+        if (collision.gameObject.CompareTag("Garden"))
+        {
+            //damageDo
+            FindObjectOfType<Garden>().TakeDamage();
+        }
+    }
+
     public void IsTouch(int damage, int strength, Transform t)
     {
         
         if(lifePoint <= 0)
         {
-            GetComponent<Rigidbody>().AddForce(t.forward * strength);
+            GetComponent<Rigidbody>().isKinematic = false;
+            GetComponent<Rigidbody>().AddForce(new Vector3(t.forward.x, t.forward.y, t.forward.z) * strength, ForceMode.Impulse);
             Invoke("Death", 1f);
             isAlive = false;
             walkFX.Stop();
@@ -71,10 +82,8 @@ public class Enemy : MonoBehaviour
         }
         else
         {
-            //GetComponent<Rigidbody>().AddForce(new Vector3(t.forward.x, t.forward.y, t.forward.z) * strength);
             lifePoint -= damage;
             hitFX.Play();
-
         }
         
         

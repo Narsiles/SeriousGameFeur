@@ -8,6 +8,9 @@ public class Three : MonoBehaviour
     [SerializeField] GameObject uiQuest2;
     [SerializeField] GameObject uiQuest3;
 
+    [SerializeField] GameObject player;
+    [SerializeField] Transform targetPosition;
+
     private bool questOneIsAccepted = false;
     [SerializeField] private bool questTwoIsAccepted = false;
     private bool questTreeIsAccepted = false;
@@ -54,11 +57,13 @@ public class Three : MonoBehaviour
     public void Completed1()
     {
         questOneIsCompleted = true;
+        player.transform.position = targetPosition.position;
     }
 
     public void Completed2()
     {
         questTwoIsCompleted = true;
+        player.transform.position = targetPosition.position;
         Debug.Log("quest2completed true");
     }
 }
