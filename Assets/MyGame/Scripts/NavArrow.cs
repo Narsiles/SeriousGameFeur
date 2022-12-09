@@ -5,6 +5,7 @@ using UnityEngine;
 public class NavArrow : MonoBehaviour
 {
     private GameObject target;
+    [SerializeField] private Transform tFollow;
 
     private void Start()
     {
@@ -12,6 +13,10 @@ public class NavArrow : MonoBehaviour
     }
     void Update()
     {
+        Vector3 newPos = tFollow.position;
+        newPos.y = transform.position.y;
+        transform.position = newPos;
+
         Vector3 targetPosition = target.transform.position;
         targetPosition.y = transform.position.y;
         transform.LookAt(targetPosition);

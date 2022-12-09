@@ -8,6 +8,7 @@ public class PlayerController : MonoBehaviour
 {
     [SerializeField] FloatingJoystick joystick;
     [SerializeField] Image cdBar;
+    [SerializeField] Image lifeBar;
     [SerializeField] GameObject allBar;
 
     Vector3 moveDirection;
@@ -18,11 +19,15 @@ public class PlayerController : MonoBehaviour
     [SerializeField] float decceleration = 0.1f;
     [SerializeField] float smoothRotation = 0.1f;
 
+    [SerializeField] ParticleSystem walkFX;
+
     [SerializeField] float atkspeed = 2f;
     private float cdAtk;
     private bool canAtk = true;
     [SerializeField] int damage = 1;
     [SerializeField] private int strength = 200;
+    [SerializeField] private float lifePointMax = 20;
+    [SerializeField] private float lifePoint = 20;
 
     // Cache
     Rigidbody rb;
@@ -31,6 +36,8 @@ public class PlayerController : MonoBehaviour
     private GameObject target;
     
     private bool haveShowel = false;
+    private bool canPlayFX = false;
+    private bool canStopFX = true;
 
     private void Awake()
     {
@@ -44,18 +51,33 @@ public class PlayerController : MonoBehaviour
     void Update()
     {
         cdBar.fillAmount = cdAtk / atkspeed;
+        lifeBar.fillAmount = lifePoint / lifePointMax;
 
         if (joystick.Direction.magnitude > 0)
         {
+            
             // Vecteur de direction de déplacement
             moveDirection = new Vector3(joystick.Direction.x, 0, joystick.Direction.y).normalized;
             moveSpeed = Mathf.Lerp(moveSpeed, speedMax, acceleration) * joystick.Direction.magnitude;
 
         } else {
             moveSpeed = Mathf.Lerp(moveSpeed, 0, decceleration);
+            
         }
-       
-       
+        
+        if (joystick.Direction.magnitude > 0 && canPlayFX == true)
+        {
+            walkFX.Play();
+            canPlayFX = false;
+            canStopFX = true;
+        }
+        else if (joystick.Direction.magnitude <= 0 && canStopFX == true)
+        {
+            walkFX.Stop();
+            canStopFX = false;
+            canPlayFX = true;
+        }
+
         if (isTrigger)
         {
             transform.LookAt(target.transform.position);
@@ -79,7 +101,6 @@ public class PlayerController : MonoBehaviour
             else
             {
                 cdAtk += Time.deltaTime;
-                
             }
         }
 
@@ -124,5 +145,10 @@ public class PlayerController : MonoBehaviour
     public void TakeShowel()
     {
         haveShowel = true;
+    }
+
+    private void TakeDamage()
+    {
+        lifePoint -= 1;
     }
 }
