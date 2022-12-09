@@ -74,6 +74,7 @@ public class Enemy : MonoBehaviour
         if(lifePoint <= 0)
         {
             //Destroy(Collider);
+            GetComponent<TrailRenderer>().enabled = true;
             GetComponent<Rigidbody>().isKinematic = false;
             GetComponent<Rigidbody>().AddForce(new Vector3(t.forward.x, t.forward.y, t.forward.z) * strength, ForceMode.Impulse);
             Invoke("Death", 1f);
