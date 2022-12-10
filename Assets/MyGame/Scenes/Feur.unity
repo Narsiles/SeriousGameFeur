@@ -13438,6 +13438,7 @@ MonoBehaviour:
   Garden1: {fileID: 1324175324}
   Garden2: {fileID: 1679812999}
   Garden3: {fileID: 149383661}
+  navArrow: {fileID: 724181990}
 --- !u!1001 &580888030
 PrefabInstance:
   m_ObjectHideFlags: 0
