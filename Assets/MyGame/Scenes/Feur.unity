@@ -2480,6 +2480,10 @@ PrefabInstance:
       propertyPath: m_ConstrainProportionsScale
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 5532604959824789850, guid: 4dbddf131560aa0499d6cb191594bcaf, type: 3}
+      propertyPath: m_Materials.Array.size
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 5532604959824789852, guid: 4dbddf131560aa0499d6cb191594bcaf, type: 3}
       propertyPath: lifeBar
       value: 
@@ -20608,6 +20612,10 @@ PrefabInstance:
     - target: {fileID: 5532604959824789848, guid: 4dbddf131560aa0499d6cb191594bcaf, type: 3}
       propertyPath: m_LocalPosition.z
       value: -5.96
+      objectReference: {fileID: 0}
+    - target: {fileID: 5532604959824789850, guid: 4dbddf131560aa0499d6cb191594bcaf, type: 3}
+      propertyPath: m_Materials.Array.size
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5532604959824789852, guid: 4dbddf131560aa0499d6cb191594bcaf, type: 3}
       propertyPath: lifeBar
@@ -43937,6 +43945,10 @@ PrefabInstance:
     - target: {fileID: 5532604959824789849, guid: 4dbddf131560aa0499d6cb191594bcaf, type: 3}
       propertyPath: m_IsTrigger
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5532604959824789850, guid: 4dbddf131560aa0499d6cb191594bcaf, type: 3}
+      propertyPath: m_Materials.Array.size
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5532604959824789852, guid: 4dbddf131560aa0499d6cb191594bcaf, type: 3}
       propertyPath: lifeBar
