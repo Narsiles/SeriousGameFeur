@@ -12,6 +12,8 @@ public class GameManager : MonoBehaviour
     [SerializeField] private GameObject Garden4;
     [SerializeField] private GameObject navArrow;
 
+    public Text scoreText;
+
     private bool isG1 = false;
     private bool isG2 = false;
     private bool isG3 = false;
@@ -22,24 +24,27 @@ public class GameManager : MonoBehaviour
 
     public void SpawnGarden1()
     {
-        
+        scoreText.text = "5";
         Garden1.SetActive(true);
         isG1 = true;
     }
     public void SpawnGarden2()
     {
+        scoreText.text = "11";
         Garden2.SetActive(true);
         isG2 = true;
     }
 
     public void SpawnGarden3()
     {
+        scoreText.text = "18";
         Garden3.SetActive(true);
         isG3 = true;
     }
     
     public void SpawnGarden4()
     {
+        scoreText.text = "18";
         Garden4.SetActive(true);
         isG3 = true;
     }
@@ -61,9 +66,11 @@ public class GameManager : MonoBehaviour
     public void CallCheckWave()
     {
         enemy = GameObject.FindGameObjectsWithTag("Enemy");
- 
-        if(enemy.Length == 0 && isG1 == true)
-        {           
+
+
+        if (enemy.Length == 0 && isG1 == true)
+        {
+            
             Time.timeScale = 0;
             navArrow.SetActive(true);
             Destroy(Garden1);
@@ -75,6 +82,7 @@ public class GameManager : MonoBehaviour
         }
         else if(enemy.Length == 0 && isG2 == true)
         {
+            
             navArrow.SetActive(true);
             Destroy(Garden2);
             Debug.Log("Next waves 2");
@@ -85,6 +93,7 @@ public class GameManager : MonoBehaviour
         }
         else if(enemy.Length == 0 && isG3 == true)
         {
+           
             navArrow.SetActive(true);
             Destroy(Garden3);
             isG3 = false;
@@ -94,7 +103,7 @@ public class GameManager : MonoBehaviour
             FindObjectOfType<Button_Script>().Victoir3();
         }
         else if(enemy.Length == 0 && isG4 == true)
-        {
+        {       
             navArrow.SetActive(true);
             Destroy(Garden4);
             isG4 = false;
@@ -102,6 +111,11 @@ public class GameManager : MonoBehaviour
             FindObjectOfType<Button_Script>().Victoir4();
         }
 
+    }
+
+    public void Update()
+    {
+        scoreText.text = (enemy.Length).ToString();
     }
 
 }
