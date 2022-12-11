@@ -10,7 +10,10 @@ public class GameManager : MonoBehaviour
     [SerializeField] private GameObject Garden2;
     [SerializeField] private GameObject Garden3;
     [SerializeField] private GameObject Garden4;
+
     [SerializeField] private GameObject navArrow;
+
+    [SerializeField] private GameObject winMenu;
 
     public Text scoreText;
 
@@ -65,7 +68,7 @@ public class GameManager : MonoBehaviour
 
     public void CallCheckWave()
     {
-        enemy = GameObject.FindGameObjectsWithTag("Enemy");
+        
 
 
         if (enemy.Length == 0 && isG1 == true)
@@ -113,8 +116,14 @@ public class GameManager : MonoBehaviour
 
     }
 
-    public void Update()
+    public void IsFinish()
     {
+        winMenu.SetActive(true);
+    }
+
+    private void Update()
+    {
+        enemy = GameObject.FindGameObjectsWithTag("Enemy");
         scoreText.text = (enemy.Length).ToString();
     }
 
