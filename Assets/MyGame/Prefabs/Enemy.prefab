@@ -198,7 +198,7 @@ CapsuleCollider:
   m_Material: {fileID: 13400000, guid: 56d936a64cac28f48ba5fcff0900e215, type: 2}
   m_IsTrigger: 0
   m_Enabled: 1
-  m_Radius: 0.17
+  m_Radius: 0.15
   m_Height: 0
   m_Direction: 1
   m_Center: {x: 0, y: 0, z: -0.03}
@@ -220,8 +220,8 @@ NavMeshAgent:
   m_AutoTraverseOffMeshLink: 1
   m_AutoBraking: 1
   m_AutoRepath: 1
-  m_Height: 0.35
-  m_BaseOffset: 0.18
+  m_Height: 0.23
+  m_BaseOffset: 0.12
   m_WalkableMask: 4294967295
   m_ObstacleAvoidanceType: 4
 --- !u!114 &-4923008055065321823

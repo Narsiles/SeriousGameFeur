@@ -10,10 +10,15 @@ public class Button_Script : MonoBehaviour
     [SerializeField] public GameObject Vic1;
     [SerializeField] public GameObject Vic2;
     [SerializeField] public GameObject Vic3;
+    [SerializeField] public GameObject Vic4;
+    [SerializeField] public GameObject sPlayer;
+    [SerializeField] public GameObject sThree;
 
 
     public void QuestOneAccept()
     {
+        Destroy(sThree);
+        sPlayer.SetActive(true);
         FindObjectOfType<GameManager>().SpawnGarden1();
         FindObjectOfType<Three>().QuestOneAccept();
         FindObjectOfType<NavArrow>().QuestOneAccept();
@@ -31,6 +36,14 @@ public class Button_Script : MonoBehaviour
         FindObjectOfType<GameManager>().SpawnGarden3();
         FindObjectOfType<Three>().QuestTreeAccept();
         FindObjectOfType<NavArrow>().QuestTreeAccept();
+        FindObjectOfType<PlayerController>().Upgrade();
+    } 
+    
+    public void QuestFourAccept()
+    {
+        FindObjectOfType<GameManager>().SpawnGarden4();
+        FindObjectOfType<Three>().QuestFourAccept();
+        FindObjectOfType<NavArrow>().QuestFourAccept();
     }
 
     public void Pause()
@@ -52,6 +65,11 @@ public class Button_Script : MonoBehaviour
     public void Victoir3()
     {
         Vic3.gameObject.SetActive(true);
+        Time.timeScale = 0;
+    }
+    public void Victoir4()
+    {
+        Vic4.gameObject.SetActive(true);
         Time.timeScale = 0;
     }
 

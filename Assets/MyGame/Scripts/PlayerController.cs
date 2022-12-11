@@ -148,4 +148,9 @@ public class PlayerController : MonoBehaviour
     {
         haveShowel = true;
     }
+
+    public void Upgrade()
+    {
+        atkspeed = atkspeed / 2;
+    }
 }
