@@ -1,6 +1,8 @@
 using System.Collections;
 using System.Collections.Generic;
+using UnityEngine.UI;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class GameManager : MonoBehaviour
 {
@@ -8,6 +10,7 @@ public class GameManager : MonoBehaviour
     [SerializeField] private GameObject Garden2;
     [SerializeField] private GameObject Garden3;
     [SerializeField] private GameObject navArrow;
+
     private bool isG1 = false;
     private bool isG2 = false;
     private bool isG3 = false;
@@ -52,13 +55,15 @@ public class GameManager : MonoBehaviour
         enemy = GameObject.FindGameObjectsWithTag("Enemy");
  
         if(enemy.Length == 0 && isG1 == true)
-        {
+        {           
+            Time.timeScale = 0;
             navArrow.SetActive(true);
             Destroy(Garden1);
             Debug.Log("next wave 1");
             FindObjectOfType<NavArrow>().LookThree();
             FindObjectOfType<Three>().Completed1();
             isG1 = false;
+            FindObjectOfType<Button_Script>().Victoir1();
         }
         else if(enemy.Length == 0 && isG2 == true)
         {
@@ -68,6 +73,7 @@ public class GameManager : MonoBehaviour
             FindObjectOfType<NavArrow>().LookThree();
             FindObjectOfType<Three>().Completed2();
             isG2 = false;
+            FindObjectOfType<Button_Script>().Victoir2();
         }
         else if(enemy.Length == 0 && isG3 == true)
         {
@@ -76,6 +82,7 @@ public class GameManager : MonoBehaviour
             isG3 = false;
             FindObjectOfType<NavArrow>().LookThree();
             Debug.Log("fini");
+            FindObjectOfType<Button_Script>().Victoir3();
         }
 
     }

@@ -18,6 +18,7 @@ public class PlayerController : MonoBehaviour
     [SerializeField] float acceleration = 0.1f;
     [SerializeField] float decceleration = 0.1f;
     [SerializeField] float smoothRotation = 0.1f;
+    public AudioSource audioPlayer;
 
     [SerializeField] ParticleSystem walkFX;
 
@@ -136,6 +137,7 @@ public class PlayerController : MonoBehaviour
         {
             if(canAtk == true)
             {
+                audioPlayer.Play();
                 targetfunction.GetComponent<Enemy>().IsTouch(damage, strength, transform);
                 canAtk = false;
             }

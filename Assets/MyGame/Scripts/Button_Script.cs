@@ -7,6 +7,9 @@ using UnityEngine.SceneManagement;
 public class Button_Script : MonoBehaviour
 {
     [SerializeField] GameObject Option;
+    [SerializeField] public GameObject Vic1;
+    [SerializeField] public GameObject Vic2;
+    [SerializeField] public GameObject Vic3;
 
 
     public void QuestOneAccept()
@@ -30,10 +33,43 @@ public class Button_Script : MonoBehaviour
         FindObjectOfType<NavArrow>().QuestTreeAccept();
     }
 
-    public void Pause ()
+    public void Pause()
     {
         Option.gameObject.SetActive(true);
         Time.timeScale = 0;
+    }
+    public void Victoir1()
+    {
+        Vic1.gameObject.SetActive(true);
+        Time.timeScale = 0;
+    }
+    public void Victoir2()
+    {
+        Vic2.gameObject.SetActive(true);
+        Time.timeScale = 0;
+    }
+
+    public void Victoir3()
+    {
+        Vic3.gameObject.SetActive(true);
+        Time.timeScale = 0;
+    }
+
+    public void ReturnVictoir1()
+    {
+        Vic1.gameObject.SetActive(false);
+        Time.timeScale = 1;
+    }
+    public void ReturnVictoir2()
+    {
+        Vic2.gameObject.SetActive(false);
+        Time.timeScale = 1;
+    }
+
+    public void ReturnVictoir3()
+    {
+        Vic3.gameObject.SetActive(false);
+        Time.timeScale = 1;
     }
 
     public void Play() 
