@@ -30765,7 +30765,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 1c487c9e3afd1bc4b8e2b3b4bf39c954, type: 2}
+  - {fileID: 2100000, guid: 3ac407f9321fdd5499a1918bf226113c, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -43615,7 +43615,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1236366889}
-  m_LocalRotation: {x: 0.48206306, y: 0.0000000069264168, z: -0.0000000038110124, w: 0.87613654}
+  m_LocalRotation: {x: 0.48206308, y: -0.000000045752724, z: 0.000000025173815, w: 0.87613654}
   m_LocalPosition: {x: 0.17, y: 21.62, z: -113.619995}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -61007,7 +61007,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1692088372}
-  m_LocalRotation: {x: 0.48206306, y: 0.0000000069264168, z: -0.0000000038110124, w: 0.87613654}
+  m_LocalRotation: {x: 0.48206308, y: -0.000000045752724, z: 0.000000025173815, w: 0.87613654}
   m_LocalPosition: {x: 0.17, y: 21.62, z: -113.619995}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -80095,13 +80095,13 @@ Light:
   m_Type: 1
   m_Shape: 0
   m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_Intensity: 0.51
+  m_Intensity: 0.24
   m_Range: 10
   m_SpotAngle: 30
   m_InnerSpotAngle: 21.80208
   m_CookieSize: 10
   m_Shadows:
-    m_Type: 2
+    m_Type: 1
     m_Resolution: -1
     m_CustomResolution: -1
     m_Strength: 1
@@ -80521,7 +80521,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5532604959824789852, guid: 4dbddf131560aa0499d6cb191594bcaf, type: 3}
       propertyPath: lifePointMax
-      value: 60
+      value: 50
       objectReference: {fileID: 0}
     - target: {fileID: 7105432837826826404, guid: 4dbddf131560aa0499d6cb191594bcaf, type: 3}
       propertyPath: m_AnchorMax.x
