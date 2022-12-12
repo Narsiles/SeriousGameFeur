@@ -13,6 +13,7 @@ public class Enemy : MonoBehaviour
     [SerializeField] ParticleSystem walkFX;
     [SerializeField] ParticleSystem hitFX;
     [SerializeField] float damageDo = 2;
+    public AudioSource audioEnnemy;
 
     [SerializeField] private float rangeVision = 5;
     private float distanceBetween = 1000000;
@@ -65,6 +66,7 @@ public class Enemy : MonoBehaviour
         if(lifePoint <= 0)
         {
             //Destroy(Collider);
+            audioEnnemy.Play();
             GetComponent<TrailRenderer>().enabled = true;
             GetComponent<Rigidbody>().isKinematic = false;
             GetComponent<Rigidbody>().AddForce(new Vector3(t.forward.x, t.forward.y, t.forward.z) * strength, ForceMode.Impulse);
