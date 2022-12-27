@@ -11,13 +11,13 @@ GameObject:
   - component: {fileID: 3785106557470534528}
   - component: {fileID: 3785106557470534533}
   - component: {fileID: 3785106557470534532}
-  - component: {fileID: -4923008055065321823}
+  - component: {fileID: -4894403225051254689}
   - component: {fileID: 3785106557470534535}
   - component: {fileID: 474180368406339347}
   - component: {fileID: 7901926718619077041}
   - component: {fileID: 9073275522775294092}
   m_Layer: 7
-  m_Name: Enemy
+  m_Name: EnemyDistance
   m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -91,7 +91,7 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!114 &-4923008055065321823
+--- !u!114 &-4894403225051254689
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -100,17 +100,19 @@ MonoBehaviour:
   m_GameObject: {fileID: 3785106557470534531}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 24ab4a8dcf0eb7b43ad43fb6cf71d766, type: 3}
+  m_Script: {fileID: 11500000, guid: d3650cf840f9e7c4c832f9e7f7b4a370, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   target: {fileID: 0}
   garden: []
-  player: {fileID: 3785106557470534531, guid: af16a7f14fe388d488e1a7a769a7e718, type: 3}
-  lifePoint: 0
+  player: {fileID: 0}
+  bullet: {fileID: 9204706872069323199, guid: c057c1f13c5ee74428e3b3aa3dc47e67, type: 3}
+  lifePoint: 3
   walkFX: {fileID: 6372163397600759919}
   hitFX: {fileID: 7141768014395885174}
   audioEnnemy: {fileID: 8629082291586327920}
-  rangeVision: 5
+  rangeVision: 20
+  attackSpeed: 2
 --- !u!136 &3785106557470534535
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -293,7 +295,7 @@ GameObject:
   - component: {fileID: 5617349396333890741}
   m_Layer: 7
   m_Name: Smoke
-  m_TagString: Untagged
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -4936,7 +4938,7 @@ GameObject:
   - component: {fileID: 8629082291586327920}
   m_Layer: 0
   m_Name: BRUIT BLABLA
-  m_TagString: Untagged
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -5158,6 +5160,10 @@ PrefabInstance:
     - target: {fileID: 4021103657954561961, guid: 5c755f9bc5253ea418e919994537dcc7, type: 3}
       propertyPath: m_Layer
       value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 4021103657954561961, guid: 5c755f9bc5253ea418e919994537dcc7, type: 3}
+      propertyPath: m_TagString
+      value: Enemy
       objectReference: {fileID: 0}
     - target: {fileID: 4096995433319591838, guid: 5c755f9bc5253ea418e919994537dcc7, type: 3}
       propertyPath: m_Materials.Array.size

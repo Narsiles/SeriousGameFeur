@@ -1,21 +1,22 @@
-using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.AI;
 
-public class Enemy : MonoBehaviour
+public class EnemyDistance : MonoBehaviour
 {
     [SerializeField] public Transform target;
     [SerializeField] GameObject[] garden;
     [SerializeField] GameObject player;
+    [SerializeField] GameObject bullet;
     [SerializeField] int lifePoint = 3;
     [SerializeField] ParticleSystem walkFX;
     [SerializeField] ParticleSystem hitFX;
-    [SerializeField] ParticleSystem stunFX;
     public AudioSource audioEnnemy;
+
+    [SerializeField] private float rangeVision = 5;
+    [SerializeField] private float attackSpeed = 2;
     private float distanceBetween = 1000000;
-    private float tempStun = 1f;
 
     private void Start()
     {
@@ -29,7 +30,7 @@ public class Enemy : MonoBehaviour
 
     private void ChooseTarget()
     {
-        for(int i = 0; i < garden.Length; i++)
+        for (int i = 0; i < garden.Length; i++)
         {
             if (Vector3.Distance(garden[i].transform.position, transform.position) < distanceBetween)
             {
@@ -41,16 +42,21 @@ public class Enemy : MonoBehaviour
 
     void Update()
     {
-        if(GetComponent<Rigidbody>().velocity != new Vector3(0, 0, 0))
+
+        if (Vector3.Distance(target.transform.position, transform.position) < rangeVision)
         {
-            walkFX.Stop();
+            target = player.transform;
+            GetComponent<Rigidbody>().Sleep();
+            GetComponent<NavMeshAgent>().isStopped = true;
+            Shoot();
+            walkFX.Stop(); 
         }
     }
 
     public void IsTouch(int damage, int strength, Transform t)
     {
-        
-        if(lifePoint <= 0)
+
+        if (lifePoint <= 0)
         {
             //Destroy(Collider);
             audioEnnemy.Play();
@@ -64,11 +70,10 @@ public class Enemy : MonoBehaviour
         else
         {
             lifePoint -= damage;
-            Stun();
             hitFX.Play();
         }
-        
-        
+
+
     }
 
     private void OnMouseDown()
@@ -82,18 +87,10 @@ public class Enemy : MonoBehaviour
         FindObjectOfType<GameManager>().CheckWave();
     }
 
-    private void Stun()
+    private void Shoot()
     {
-        GetComponent<Rigidbody>().Sleep();
-        GetComponent<NavMeshAgent>().isStopped = true;
-        stunFX.Play();
-        Invoke("Restart", tempStun);
-    }
+        Instantiate(bullet, new Vector3(transform.position.x, transform.position.y, transform.position.z), Quaternion.identity);
 
-    private void Restart()
-    {
-        stunFX.Stop();
-        GetComponent<NavMeshAgent>().isStopped = false;
+        Invoke("Shoot", attackSpeed);
     }
-
 }
