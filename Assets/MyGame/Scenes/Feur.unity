@@ -30546,11 +30546,6 @@ Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: 88210b3c320e0d04f9969f25c1c7794d, type: 3}
   m_PrefabInstance: {fileID: 916992808}
   m_PrefabAsset: {fileID: 0}
---- !u!198 &917065151 stripped
-ParticleSystem:
-  m_CorrespondingSourceObject: {fileID: 5916824109247672887, guid: 80945dfd1ce3c654a9b3ff6011019fca, type: 3}
-  m_PrefabInstance: {fileID: 3792318862164871300}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &921484574
 GameObject:
   m_ObjectHideFlags: 0
@@ -81399,16 +81394,8 @@ PrefabInstance:
       value: Sign
       objectReference: {fileID: 0}
     - target: {fileID: 3792318862309951332, guid: 80945dfd1ce3c654a9b3ff6011019fca, type: 3}
-      propertyPath: fx
-      value: 
-      objectReference: {fileID: 917065151}
-    - target: {fileID: 3792318862309951332, guid: 80945dfd1ce3c654a9b3ff6011019fca, type: 3}
       propertyPath: signUI
       value: 
       objectReference: {fileID: 1943907582}
-    - target: {fileID: 5916824109247672887, guid: 80945dfd1ce3c654a9b3ff6011019fca, type: 3}
-      propertyPath: looping
-      value: 1
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 80945dfd1ce3c654a9b3ff6011019fca, type: 3}
