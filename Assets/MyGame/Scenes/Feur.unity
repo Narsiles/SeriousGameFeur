@@ -4840,6 +4840,34 @@ PrefabInstance:
       propertyPath: lifePointMax
       value: 1000
       objectReference: {fileID: 0}
+    - target: {fileID: 7051145757432058322, guid: 4dbddf131560aa0499d6cb191594bcaf, type: 3}
+      propertyPath: m_Size.x
+      value: 87.206345
+      objectReference: {fileID: 0}
+    - target: {fileID: 7051145757432058322, guid: 4dbddf131560aa0499d6cb191594bcaf, type: 3}
+      propertyPath: m_Size.y
+      value: 10.382073
+      objectReference: {fileID: 0}
+    - target: {fileID: 7051145757432058322, guid: 4dbddf131560aa0499d6cb191594bcaf, type: 3}
+      propertyPath: m_Size.z
+      value: 68.78304
+      objectReference: {fileID: 0}
+    - target: {fileID: 7051145757432058322, guid: 4dbddf131560aa0499d6cb191594bcaf, type: 3}
+      propertyPath: m_Center.x
+      value: 5.024352
+      objectReference: {fileID: 0}
+    - target: {fileID: 7051145757432058322, guid: 4dbddf131560aa0499d6cb191594bcaf, type: 3}
+      propertyPath: m_Center.y
+      value: 4.691037
+      objectReference: {fileID: 0}
+    - target: {fileID: 7051145757432058322, guid: 4dbddf131560aa0499d6cb191594bcaf, type: 3}
+      propertyPath: m_Center.z
+      value: -11.306417
+      objectReference: {fileID: 0}
+    - target: {fileID: 7051145757432058322, guid: 4dbddf131560aa0499d6cb191594bcaf, type: 3}
+      propertyPath: m_IsTrigger
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 7105432837826826404, guid: 4dbddf131560aa0499d6cb191594bcaf, type: 3}
       propertyPath: m_AnchorMax.x
       value: 0
@@ -15031,6 +15059,37 @@ Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: 70949ac3598817f4c8d6e644b6f5efc5, type: 3}
   m_PrefabInstance: {fileID: 447533987}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &447840882
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 447840883}
+  m_Layer: 0
+  m_Name: CamPosGarden3
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &447840883
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 447840882}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -59.5, y: 28.9, z: -73.4}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 953911787}
+  m_RootOrder: 2
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &451300213
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -16454,6 +16513,37 @@ Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: 5f347c3f43e44cc419f02dceb36cace0, type: 3}
   m_PrefabInstance: {fileID: 485379897}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &486242389
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 486242390}
+  m_Layer: 3
+  m_Name: CamFollow
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &486242390
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 486242389}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 20.29, z: -12.77}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 2017582082}
+  m_RootOrder: 4
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &486380222
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -19259,6 +19349,11 @@ MonoBehaviour:
   Garden2: {fileID: 1564574741}
   Garden3: {fileID: 884932189}
   Garden4: {fileID: 1963899377}
+  GardenTarget1: {fileID: 1732374278}
+  GardenTarget2: {fileID: 1515850745}
+  GardenTarget3: {fileID: 447840882}
+  GardenTarget4: {fileID: 1023178539}
+  PlayerTarget: {fileID: 0}
   navArrow: {fileID: 724181990}
   winMenu: {fileID: 1278647445}
   scoreText: {fileID: 1994560467}
@@ -20888,7 +20983,7 @@ Transform:
   - {fileID: 1256181821}
   - {fileID: 1009513424}
   m_Father: {fileID: 880388571}
-  m_RootOrder: 2
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &613199429
 PrefabInstance:
@@ -30101,6 +30196,7 @@ Transform:
   m_Children:
   - {fileID: 898187078}
   - {fileID: 1433787538}
+  - {fileID: 953911787}
   - {fileID: 607185743}
   m_Father: {fileID: 0}
   m_RootOrder: 6
@@ -32473,6 +32569,41 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 0.15868944, y: 0.07377433, z: 0.034364752}
   m_Center: {x: 0, y: -0.0000000037252903, z: 0.000000059604645}
+--- !u!1 &953911786
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 953911787}
+  m_Layer: 0
+  m_Name: CamPos
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &953911787
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 953911786}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 1732374279}
+  - {fileID: 1515850746}
+  - {fileID: 447840883}
+  - {fileID: 1023178540}
+  m_Father: {fileID: 880388571}
+  m_RootOrder: 2
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &954520588
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -35356,6 +35487,37 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 0.15868944, y: 0.07377433, z: 0.034364752}
   m_Center: {x: 0, y: -0.0000000037252903, z: 0.000000059604645}
+--- !u!1 &1023178539
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1023178540}
+  m_Layer: 0
+  m_Name: CamPosGarden4
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1023178540
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1023178539}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 47.4, y: 9.9, z: 12}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 953911787}
+  m_RootOrder: 3
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1023600039
 GameObject:
   m_ObjectHideFlags: 0
@@ -44513,7 +44675,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1236366889}
-  m_LocalRotation: {x: 0.48206306, y: 0.0000000069264168, z: -0.0000000038110124, w: 0.87613654}
+  m_LocalRotation: {x: 0.48206308, y: -0.000000045752724, z: 0.000000025173815, w: 0.87613654}
   m_LocalPosition: {x: 0.17, y: 21.62, z: -113.619995}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -48690,6 +48852,34 @@ PrefabInstance:
     - target: {fileID: 5532604959824789852, guid: 4dbddf131560aa0499d6cb191594bcaf, type: 3}
       propertyPath: lifePointMax
       value: 1000
+      objectReference: {fileID: 0}
+    - target: {fileID: 7051145757432058322, guid: 4dbddf131560aa0499d6cb191594bcaf, type: 3}
+      propertyPath: m_Size.x
+      value: 83.68954
+      objectReference: {fileID: 0}
+    - target: {fileID: 7051145757432058322, guid: 4dbddf131560aa0499d6cb191594bcaf, type: 3}
+      propertyPath: m_Size.y
+      value: 20.303896
+      objectReference: {fileID: 0}
+    - target: {fileID: 7051145757432058322, guid: 4dbddf131560aa0499d6cb191594bcaf, type: 3}
+      propertyPath: m_Size.z
+      value: 68.677025
+      objectReference: {fileID: 0}
+    - target: {fileID: 7051145757432058322, guid: 4dbddf131560aa0499d6cb191594bcaf, type: 3}
+      propertyPath: m_Center.x
+      value: 14.247244
+      objectReference: {fileID: 0}
+    - target: {fileID: 7051145757432058322, guid: 4dbddf131560aa0499d6cb191594bcaf, type: 3}
+      propertyPath: m_Center.y
+      value: 9.651946
+      objectReference: {fileID: 0}
+    - target: {fileID: 7051145757432058322, guid: 4dbddf131560aa0499d6cb191594bcaf, type: 3}
+      propertyPath: m_Center.z
+      value: -16.466936
+      objectReference: {fileID: 0}
+    - target: {fileID: 7051145757432058322, guid: 4dbddf131560aa0499d6cb191594bcaf, type: 3}
+      propertyPath: m_IsTrigger
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 7105432837826826404, guid: 4dbddf131560aa0499d6cb191594bcaf, type: 3}
       propertyPath: m_AnchorMax.x
@@ -55841,6 +56031,37 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 0.15868944, y: 0.07377433, z: 0.034364752}
   m_Center: {x: 0, y: -0.0000000037252903, z: 0.000000059604645}
+--- !u!1 &1515850745
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1515850746}
+  m_Layer: 0
+  m_Name: CamPosGarden2
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1515850746
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1515850745}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 50.2, y: 14.8, z: -77.8}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 953911787}
+  m_RootOrder: 1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1519173682
 GameObject:
   m_ObjectHideFlags: 0
@@ -62519,7 +62740,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1692088372}
-  m_LocalRotation: {x: 0.48206306, y: 0.0000000069264168, z: -0.0000000038110124, w: 0.87613654}
+  m_LocalRotation: {x: 0.48206308, y: -0.000000045752724, z: 0.000000025173815, w: 0.87613654}
   m_LocalPosition: {x: 0.17, y: 21.62, z: -113.619995}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -68698,6 +68919,37 @@ ParticleSystem:
         m_PostInfinity: 2
         m_RotationOrder: 4
     vectorLabel1_3: W
+--- !u!1 &1732374278
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1732374279}
+  m_Layer: 0
+  m_Name: CamPosGarden1
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1732374279
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1732374278}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -50.8, y: 23.5, z: -5.1}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 953911787}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &1733783000
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -74835,6 +75087,34 @@ PrefabInstance:
     - target: {fileID: 5532604959824789852, guid: 4dbddf131560aa0499d6cb191594bcaf, type: 3}
       propertyPath: lifePointMax
       value: 1000
+      objectReference: {fileID: 0}
+    - target: {fileID: 7051145757432058322, guid: 4dbddf131560aa0499d6cb191594bcaf, type: 3}
+      propertyPath: m_Size.x
+      value: 82.32
+      objectReference: {fileID: 0}
+    - target: {fileID: 7051145757432058322, guid: 4dbddf131560aa0499d6cb191594bcaf, type: 3}
+      propertyPath: m_Size.y
+      value: 10.867426
+      objectReference: {fileID: 0}
+    - target: {fileID: 7051145757432058322, guid: 4dbddf131560aa0499d6cb191594bcaf, type: 3}
+      propertyPath: m_Size.z
+      value: 68.402695
+      objectReference: {fileID: 0}
+    - target: {fileID: 7051145757432058322, guid: 4dbddf131560aa0499d6cb191594bcaf, type: 3}
+      propertyPath: m_Center.x
+      value: 16.827751
+      objectReference: {fileID: 0}
+    - target: {fileID: 7051145757432058322, guid: 4dbddf131560aa0499d6cb191594bcaf, type: 3}
+      propertyPath: m_Center.y
+      value: 4.9337134
+      objectReference: {fileID: 0}
+    - target: {fileID: 7051145757432058322, guid: 4dbddf131560aa0499d6cb191594bcaf, type: 3}
+      propertyPath: m_Center.z
+      value: -11.863411
+      objectReference: {fileID: 0}
+    - target: {fileID: 7051145757432058322, guid: 4dbddf131560aa0499d6cb191594bcaf, type: 3}
+      propertyPath: m_IsTrigger
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 7105432837826826404, guid: 4dbddf131560aa0499d6cb191594bcaf, type: 3}
       propertyPath: m_AnchorMax.x
@@ -82383,6 +82663,34 @@ PrefabInstance:
       propertyPath: lifePointMax
       value: 50
       objectReference: {fileID: 0}
+    - target: {fileID: 7051145757432058322, guid: 4dbddf131560aa0499d6cb191594bcaf, type: 3}
+      propertyPath: m_Size.x
+      value: 84.7921
+      objectReference: {fileID: 0}
+    - target: {fileID: 7051145757432058322, guid: 4dbddf131560aa0499d6cb191594bcaf, type: 3}
+      propertyPath: m_Size.y
+      value: 18.886923
+      objectReference: {fileID: 0}
+    - target: {fileID: 7051145757432058322, guid: 4dbddf131560aa0499d6cb191594bcaf, type: 3}
+      propertyPath: m_Size.z
+      value: 67.95206
+      objectReference: {fileID: 0}
+    - target: {fileID: 7051145757432058322, guid: 4dbddf131560aa0499d6cb191594bcaf, type: 3}
+      propertyPath: m_Center.x
+      value: -3.684645
+      objectReference: {fileID: 0}
+    - target: {fileID: 7051145757432058322, guid: 4dbddf131560aa0499d6cb191594bcaf, type: 3}
+      propertyPath: m_Center.y
+      value: 8.943458
+      objectReference: {fileID: 0}
+    - target: {fileID: 7051145757432058322, guid: 4dbddf131560aa0499d6cb191594bcaf, type: 3}
+      propertyPath: m_Center.z
+      value: -3.1115847
+      objectReference: {fileID: 0}
+    - target: {fileID: 7051145757432058322, guid: 4dbddf131560aa0499d6cb191594bcaf, type: 3}
+      propertyPath: m_IsTrigger
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 7105432837826826404, guid: 4dbddf131560aa0499d6cb191594bcaf, type: 3}
       propertyPath: m_AnchorMax.x
       value: 0
@@ -83054,6 +83362,10 @@ PrefabInstance:
       propertyPath: joystick
       value: 
       objectReference: {fileID: 655731088}
+    - target: {fileID: 3785106557470534534, guid: af16a7f14fe388d488e1a7a769a7e718, type: 3}
+      propertyPath: navArrow
+      value: 
+      objectReference: {fileID: 724181990}
     - target: {fileID: 3785106557470534534, guid: af16a7f14fe388d488e1a7a769a7e718, type: 3}
       propertyPath: speedMax
       value: 8

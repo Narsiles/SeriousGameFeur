@@ -4,6 +4,7 @@ using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.Animations;
 using DG.Tweening;
+using Cinemachine;
 
 public class PlayerController : MonoBehaviour
 {
@@ -11,6 +12,7 @@ public class PlayerController : MonoBehaviour
     [SerializeField] Image cdBar;
 
     [SerializeField] GameObject allBar;
+    [SerializeField] GameObject navArrow;
 
     Vector3 moveDirection;
     Vector3 aimDirection;
@@ -55,7 +57,7 @@ public class PlayerController : MonoBehaviour
     {
         cdBar.fillAmount = cdAtk / atkspeed;
        
-
+        
 
         if (joystick.Direction.magnitude > 0)
         {
@@ -112,6 +114,8 @@ public class PlayerController : MonoBehaviour
 
     private void OnTriggerStay(Collider other)
     {
+        
+
         if (other.CompareTag("Enemy"))
         {
             isTrigger = true;
@@ -130,6 +134,13 @@ public class PlayerController : MonoBehaviour
 
     private void OnTriggerExit(Collider other)
     {
+        if (other.CompareTag("GardenTarget"))
+        {
+            navArrow.SetActive(true);
+
+            FindObjectOfType<GameManager>().ChangeCameraToPLayer();
+        }
+
         if (other.CompareTag("Enemy"))
         {
             isTrigger = false;
@@ -142,12 +153,23 @@ public class PlayerController : MonoBehaviour
         }
     }
 
+    private void OnTriggerEnter(Collider other)
+    {
+        if (other.CompareTag("GardenTarget"))
+        {
+            navArrow.SetActive(false);
+
+            FindObjectOfType<GameManager>().ChangeCameraToGarden();
+        }
+    }
+
     private void FixedUpdate()
     {
         // Vélocité = direction * vitesse * inclinaison du joystick
         rb.velocity = moveDirection * moveSpeed;
 
     } 
+
     void TryToShoot(GameObject targetfunction)
     {
         if(haveShowel == true)
