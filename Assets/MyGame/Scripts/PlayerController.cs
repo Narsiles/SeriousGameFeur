@@ -13,6 +13,9 @@ public class PlayerController : MonoBehaviour
 
     [SerializeField] GameObject allBar;
     [SerializeField] GameObject navArrow;
+    // [SerializeField] Transform target;
+
+    // gameObect1.transform.position = dqjegfkes.position
 
     Vector3 moveDirection;
     Vector3 aimDirection;
