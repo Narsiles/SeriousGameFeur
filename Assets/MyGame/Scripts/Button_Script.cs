@@ -7,14 +7,17 @@ using UnityEngine.SceneManagement;
 public class Button_Script : MonoBehaviour
 {
     [SerializeField] GameObject Option;
-    [SerializeField] public GameObject Vic1;
-    [SerializeField] public GameObject Vic2;
-    [SerializeField] public GameObject Vic3;
-    [SerializeField] public GameObject Vic4;
-    [SerializeField] public GameObject sPlayer;
-    [SerializeField] public GameObject sThree;
-    [SerializeField] public GameObject SoundOn;
-    [SerializeField] public GameObject SoundOff;
+    [SerializeField] GameObject Vic1;
+    [SerializeField] GameObject Vic2;
+    [SerializeField] GameObject Vic3;
+    [SerializeField] GameObject Vic4;
+    [SerializeField] GameObject sPlayer;
+    [SerializeField] GameObject sThree;
+    [SerializeField] GameObject SoundOn;
+    [SerializeField] GameObject SoundOff;
+    [SerializeField] GameObject signUI1;
+    [SerializeField] GameObject signUI2;
+    [SerializeField] GameObject signUI3;
 
     public void QuestOneAccept()
     {
@@ -45,6 +48,24 @@ public class Button_Script : MonoBehaviour
         FindObjectOfType<GameManager>().SpawnGarden4();
         FindObjectOfType<Three>().QuestFourAccept();
         FindObjectOfType<NavArrow>().QuestFourAccept();
+    }
+
+    public void signItem1()
+    {
+        signUI1.SetActive(false);
+        Time.timeScale = 1;
+    }
+
+    public void signItem2()
+    {
+        signUI2.SetActive(false);
+        Time.timeScale = 1;
+    }
+
+    public void signItem3()
+    {
+        signUI3.SetActive(false);
+        Time.timeScale = 1;
     }
 
     public void Pause()

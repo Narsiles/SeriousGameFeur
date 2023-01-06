@@ -69,7 +69,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 7ebaf27ebe559c840abf92d51239e8a7, type: 2}
+  - {fileID: 2100000, guid: 4ed011d49088a974d9c54b45bd263424, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -109,8 +109,8 @@ MonoBehaviour:
   lifePoint: 0
   walkFX: {fileID: 6372163397600759919}
   hitFX: {fileID: 7141768014395885174}
+  stunFX: {fileID: 0}
   audioEnnemy: {fileID: 8629082291586327920}
-  rangeVision: 5
 --- !u!136 &3785106557470534535
 CapsuleCollider:
   m_ObjectHideFlags: 0

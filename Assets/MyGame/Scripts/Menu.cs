@@ -10,9 +10,9 @@ public class Menu : MonoBehaviour
     [SerializeField] GameObject bCredit;
     [SerializeField] GameObject bOption;
     [SerializeField] GameObject bSer1;
-    [SerializeField] GameObject bSer2;
-    [SerializeField] public GameObject SoundOn;
-    [SerializeField] public GameObject SoundOff;
+    [SerializeField] GameObject bSer2; 
+    [SerializeField] GameObject SoundOn;
+    [SerializeField] GameObject SoundOff;
 
     // Start is called before the first frame update
     void Start()

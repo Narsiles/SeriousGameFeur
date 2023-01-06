@@ -34,6 +34,7 @@ public class PlayerController : MonoBehaviour
     private bool canAtk = true;
     [SerializeField] int damage = 1;
     [SerializeField] private int strength = 200;
+    public PelleVerte pelleVerte;
 
 
     // Cache
@@ -200,7 +201,7 @@ public class PlayerController : MonoBehaviour
 
     public void TakeShowel()
     {
-        haveShowel = true;
+        haveShowel = true;     
     }
 
     public void Upgrade()

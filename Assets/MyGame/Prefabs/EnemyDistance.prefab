@@ -31,8 +31,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3785106557470534531}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 1.66, z: 0}
-  m_LocalScale: {x: 9.662371, y: 9.662371, z: 9.662371}
+  m_LocalPosition: {x: 0, y: 1.5, z: 0}
+  m_LocalScale: {x: 8.408418, y: 8.408418, z: 8.408418}
   m_ConstrainProportionsScale: 1
   m_Children:
   - {fileID: 8551772351499646542}
@@ -111,7 +111,7 @@ MonoBehaviour:
   walkFX: {fileID: 6372163397600759919}
   hitFX: {fileID: 7141768014395885174}
   audioEnnemy: {fileID: 8629082291586327920}
-  rangeVision: 20
+  rangeVision: 15
   attackSpeed: 2
 --- !u!136 &3785106557470534535
 CapsuleCollider:
