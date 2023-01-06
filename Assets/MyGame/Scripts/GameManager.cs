@@ -172,7 +172,7 @@ public class GameManager : MonoBehaviour
             vcam.Follow = GardenTarget3;
             vcam.LookAt = GardenLookAt3;
         }
-        else
+        else if (isG4 == true)
         {
             vcam.Follow = GardenTarget4;
             vcam.LookAt = GardenLookAt4;
